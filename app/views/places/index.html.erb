@@ -1,0 +1,20 @@
+<h1>Places I've Been</h1>
+<% places = Place.all %>
+<% posts = Post.all %>
+
+<p>I have been to <% places.count%> countries</p>
+
+<ul>
+  <li>United States</li>
+  <li>Mexico</li>
+</ul>
+<p>Brazil</p>
+<p>Morocco</p>
+<ul>
+  <% for place in places %>
+    <li>Mexico</li>
+    <li><%= place["name"]%></li>
+  <% end %>
+</ul>
+
+<a href="">New Place</a>
