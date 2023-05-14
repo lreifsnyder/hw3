@@ -1,5 +1,12 @@
 class PlacesController < ApplicationController
+
   def index
-    render :template => "places/index"
+    @places = ["United States", "Mexico", "Morocco"]
   end
+
+  def new
+    @place = Place.all
+  end
+
+
 end
