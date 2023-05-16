@@ -1,10 +1,15 @@
 <h1>Places I've Been</h1>
 
-<p>I have been to <%= @places.count%> countries</p>
+<p>I have been to <%= @places.count%> places</p>
 
+<p><%= puts Place.all%></p>
 
   <% for place in @places %>
-  <p>  <%= place%> </p>
+  <p>  
+   <a href="/places/<%= place["id"]%>">
+    <%= place["name"]%> 
+    </a>
+  </p>
   <% end %>
 
 
