@@ -1,8 +1,14 @@
 <h1><%= @place["name"]%></h1>
 
-<p>Title 1</p>
-<p>Date 1</p>
-<p>Long Description 1</p>
+<div class="row">
+  <% for post in @posts %>
+    <div class="col-3">
+      <h4><%= post["title"] %></h4>
+      <p><%= post["created_at"].strftime("%Y-%m-%d") %></p>
+      <p><%= post["description"] %></p>
+    </div>
+  <% end %>
+</div>
 
 <p><a href="">New Post</a></p>
 
