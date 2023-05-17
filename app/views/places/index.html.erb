@@ -5,12 +5,14 @@
 <p><%= puts Place.all%></p>
 
   <% for place in @places %>
-  <p>  
+  <h4>  
    <a href="/places/<%= place["id"]%>">
     <%= place["name"]%> 
     </a>
-  </p>
+  </h4>
   <% end %>
+
+<p> </p>
 
 
 <p><a href="/places/new">New Place</a></p>
